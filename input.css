@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- কাস্টম স্টাইল (টেইলউইন্ডের পরে, যাতে ওভাররাইড কাজ করে) ---- */
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 150px);scroll-behavior:smooth}
+body{background:var(--bg,#fff);color:#111827;font-family:Inter,"Hind Siliguri","Noto Sans Bengali","Kalpurush",system-ui,"Noto Sans Bengali",sans-serif;-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#fff;z-index:30}
+.pill{border:1px solid #e5e7eb;background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;line-height:1.4;white-space:nowrap;transition:.15s}
+.pill.on{background:var(--ac,#111827);color:#fff;border-color:var(--ac,#111827)}
+.bg-gray-900{background-color:var(--ac,#111827)!important}.border-gray-900{border-color:var(--ac,#111827)!important}
+.card{animation:in .35s ease both}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hs::-webkit-scrollbar{display:none}.hs{scrollbar-width:none}
+#sheet>div{animation:up .25s ease both}
+@keyframes up{from{transform:translateY(100%)}to{transform:none}}
+.pulse{animation:pl 1s ease 2}
+header.sticky{background:rgba(255,255,255,.82)!important;backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px)}
+#shopName{letter-spacing:-.02em}
+.card{border-color:#eef0f4!important;transition:transform .25s ease,box-shadow .25s ease}
+@media(hover:hover){.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px -16px rgba(15,23,42,.3)!important}}
+.card .aspect-square{background:radial-gradient(circle at 50% 38%,#fff 0,#eef1f6 78%)!important}
+nav.fixed{background:rgba(255,255,255,.9)!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 -10px 30px -14px rgba(15,23,42,.2);border-top-left-radius:22px;border-top-right-radius:22px}
+#sheet{backdrop-filter:blur(3px)}
+#deal{border-color:#334155!important}#dealT{color:var(--oa,#fbbf24)!important}#dealX{color:var(--os,#cbd5e1)!important}#cd{color:var(--ot,#fff)!important}
+#dealBtn{background:var(--oa,#fbbf24)!important;color:var(--ob,#1f2937)!important}
+.pill{transition:all .2s}.pill:active{transform:scale(.96)}
+::selection{background:#fde68a}
+input[type=color]{height:44px;padding:4px!important;cursor:pointer}
+button{transition:transform .12s ease,opacity .2s ease}button:active:not(:disabled){transform:scale(.97)}button:disabled{opacity:.6;cursor:wait}
+.sk{height:300px;border-radius:20px;background:linear-gradient(90deg,#eef1f6 25%,#f8fafc 50%,#eef1f6 75%);background-size:200% 100%;animation:shine 1.2s infinite}
+@keyframes shine{to{background-position:-200% 0}}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;line-height:1.55}
+.text-xs{font-size:13px!important}.text-\[11px\]{font-size:12.5px!important}.text-\[10px\]{font-size:11.5px!important}
+.text-gray-500{color:#4b5563!important}.text-gray-400{color:#6b7280!important}.text-gray-600{color:#374151!important}
+.tr span{font-size:13px;font-weight:600}
+.tr{display:flex;flex-wrap:wrap;gap:8px}.tr span{flex:none;border:1px solid #e5e7eb;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:500;color:#374151;background:#fff}
+.dh{touch-action:none;cursor:grab}
+html{font-size:calc(16px*var(--fs,1))}
+.card{border-radius:var(--rd,16px)!important;box-shadow:var(--sh,0 1px 2px rgba(15,23,42,.05),0 10px 26px -14px rgba(15,23,42,.22))}
+.card .aspect-square{aspect-ratio:var(--ar,1/1)!important}
+#deal{background:var(--db,linear-gradient(135deg,#0f172a,#1e293b))!important}
+.hf-rat .cf-rat,.hf-ram .cf-ram,.hf-cpu .cf-cpu,.hf-gpu .cf-gpu,.hf-old .cf-old,.hf-off .cf-off,.hf-btn .cf-btn,.hf-brand .cf-brand{display:none!important}
+.wa{box-shadow:0 8px 28px rgba(16,185,129,.45);animation:glow 2s infinite}
+@keyframes glow{50%{box-shadow:0 0 0 8px rgba(16,185,129,0),0 8px 36px rgba(16,185,129,.75)}}
+@keyframes pl{50%{box-shadow:0 0 0 4px #bfdbfe}}
